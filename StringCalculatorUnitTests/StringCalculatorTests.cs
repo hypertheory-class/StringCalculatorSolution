@@ -1,20 +1,17 @@
 ﻿
-using Xunit;
-
 // Instructions: https://osherove.com/tdd-kata-1
 
-namespace StringCalculatorUnitTests
+namespace StringCalculatorUnitTests;
+
+public class StringCalculatorTests
 {
-    public class StringCalculatorTests
+    [Fact]
+    public void CalculatorReturnsZeroForEmptyString()
     {
-        [Fact]
-        public void CalculatorReturnsZeroForEmptyString()
-        {
-            var calculator = new StringCalculator();
+        var calculator = new StringCalculator();
 
-            var result = calculator.Add("");
+        var result = calculator.Add("");
 
-            Assert.Equal(0, result);
-        }
+        Assert.Equal(0, result);
     }
 }
